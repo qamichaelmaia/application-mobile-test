@@ -1,12 +1,12 @@
 export const config = {
-    runner: "local",
+    /*runner: "local",
     hostname: "127.0.0.1",
     port: 4723, 
-    path: "/", 
+    path: "/", */
     
-    specs: ["./test/specs/**/*.js"],
-    maxInstances: 1,
-    capabilities: [
+    ///specs: ["./test/specs/**/*.js"],
+    ///maxInstances: 1,
+    /*capabilities: [
         {
             "platformName": "Android",
             "appium:deviceName": "ebac-qe",
@@ -61,5 +61,5 @@ export const config = {
         if(state !== 4){
             await driver.execute('mobile: launchApp', { bundleId: 'br.com.lojaebac' })
         }
-    },
+    },*/
 };

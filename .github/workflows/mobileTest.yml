@@ -1,0 +1,32 @@
+name: EBAC CI Mobile
+
+# Definindo quando o workflow será acionado (neste caso, em cada push ou pull request)
+on:
+  push:
+    branches:
+      - ci
+
+jobs:
+  # Job para rodar os testes
+  test:
+    runs-on: ubuntu-latest
+
+    # Passos do workflow
+    steps:
+      # Passo para checar o código do repositório
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v3
+        with:
+          node-version: '21'
+
+      # Instalar dependências
+      - name: Install dependencies
+        run: npm i
+      - name: Run Tests
+        run: npm t
+      - name: Publish Report
+        uses: peaceiris/actions-gh-pages@v3
+        if: always()
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./allure-report

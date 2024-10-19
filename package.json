@@ -12,12 +12,18 @@
     "typescript": "^5.6.3"
   },
   "scripts": {
-    "test": "wdio run ./wdio.conf.js",
-    "test:android:login": "wdio run ./wdio.conf.js --suite login",
-    "test:android:product": "wdio run ./wdio.conf.js --suite product",
-    "test:android:search": "wdio run ./wdio.conf.js --suite search"
+    "test": "wdio run ./config/wdio.conf.js",
+    "test:login": "wdio run ./config/wdio.conf.js --suite login",
+    "test:search": "wdio run ./config/wdio.conf.js --suite search",
+    "test:product": "wdio run ./config/wdio.conf.js --suite product",
+    "posttest": "npm run report",
+    "report": "allure generate allure-results"
   },
   "dependencies": {
-    "allure-commandline": "^2.25.0"
+    "allure-commandline": "^2.25.0",
+    "dotenv": "^16.4.5"
+  },
+  "_comentarios": {
+    "descrição": "test:product: wdio run ./config/wdio.conf.js --suite product"
   }
 }
