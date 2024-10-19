@@ -17,7 +17,7 @@
     "test:product": "wdio run ./config/wdio.conf.js --suite product",
     "test:search": "wdio run ./config/wdio.conf.js --suite search",
     "posttest": "npm run report",
-    "report": "allure generate allure-results"
+    "report": "allure generate allure-results --clean"
   },
   "dependencies": {
     "allure-commandline": "^2.25.0",
