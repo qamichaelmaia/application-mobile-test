@@ -11,7 +11,7 @@ export let sauceConf = {
     capabilities: process.env.PLATFORM === "android" ? [
         {
             platformName: 'Android',
-            'appium:app': 'storage:filename=loja-ebac.apk',
+            'appium:app': 'storage:filename=ebacshop.aab',
             'appium:deviceName': 'Samsung Galaxy S9 FHD GoogleAPI Emulator',
             'appium:platformVersion': '9.0',
             'appium:automationName': 'UiAutomator2',
@@ -23,7 +23,8 @@ export let sauceConf = {
              },
            },
     ] : [
-        {
+        /*{
+            platformName: 'iOS',
             'appium:app': 'storage:filename=LojaEBAC.ipa',
             'appium:deviceName': 'iPhone.*',
             'appium:platformVersion': '17.0',
@@ -33,7 +34,7 @@ export let sauceConf = {
                build: 'appium-build-teste-ebacshop-ios',
                name: 'Ebac Shop Teste'
             },
-        }
+        }*/
     ],
     ...generalConf
 };
