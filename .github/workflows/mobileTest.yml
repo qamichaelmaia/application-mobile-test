@@ -1,29 +1,33 @@
 name: EBAC CI Mobile
 
-# Definindo quando o workflow será acionado (neste caso, em cada push ou pull request)
 on:
   push:
     branches:
       - ci
 
 jobs:
-  # Job para rodar os testes
   test:
     runs-on: ubuntu-latest
 
-    # Passos do workflow
     steps:
-      # Passo para checar o código do repositório
+      # Checkout do código
       - uses: actions/checkout@v4
-      - uses: actions/checkout@v3
+
+      # Configurar Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
         with:
           node-version: '21'
 
       # Instalar dependências
       - name: Install dependencies
         run: npm i
+
+      # Rodar os testes
       - name: Run Tests
         run: npm t
+
+      # Publicar o relatório Allure
       - name: Publish Report
         uses: peaceiris/actions-gh-pages@v3
         if: always()
