@@ -10,27 +10,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Checkout do código
       - uses: actions/checkout@v4
 
-      # Configurar Node.js
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '21'
 
-      # Instalar dependências
       - name: Install dependencies
-        run: npm i
+        run: npm install
 
-      # Rodar os testes
       - name: Run Tests
-        run: npm t
+        run: npm test
 
-      # Publicar o relatório Allure
       - name: Publish Report
         uses: peaceiris/actions-gh-pages@v3
         if: always()
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./allure-report
+          publish_branch: gh-pages
