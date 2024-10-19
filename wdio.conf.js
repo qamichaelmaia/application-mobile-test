@@ -1,10 +1,8 @@
 export const config = {
     runner: "local",
-    hostname: "127.0.0.1", // Garantindo que o hostname seja o mesmo do servidor Appium
-    port: 4723, // Porta correta do Appium
-    path: "/", // Certifique-se de que este caminho esteja correto
-
-///emulator -avd ebac
+    hostname: "127.0.0.1",
+    port: 4723, 
+    path: "/", 
     
     specs: ["./test/specs/**/*.js"],
     maxInstances: 1,
