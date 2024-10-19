@@ -1,4 +1,4 @@
-export let reportersConf = process.env.REPOTER === 'true' ? { 
+export let reportersConf = process.env.REPORT === 'true' ? { 
     reporters: ["spec",
         ["allure",{
                 outputDir: "allure-results",
