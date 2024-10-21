@@ -1,0 +1,5 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Sat Oct 19 12:48:12 GMT-03:00 2024","Sat Oct 19 12:48:27 GMT-03:00 2024","14860","","Product Details: Address Tests","","","","should add new address",""
+"passed","Sat Oct 19 12:47:41 GMT-03:00 2024","Sat Oct 19 12:48:12 GMT-03:00 2024","31378","","Product Details","","","","should view product info",""
+"passed","Sat Oct 19 12:48:30 GMT-03:00 2024","Sat Oct 19 12:48:38 GMT-03:00 2024","7421","","Product Details: Should continue to payment","","","","should verify successful payment",""
+"passed","Sat Oct 19 12:48:27 GMT-03:00 2024","Sat Oct 19 12:48:30 GMT-03:00 2024","3602","","Product Details: Should continue to payment","","","","should continue for payment",""
