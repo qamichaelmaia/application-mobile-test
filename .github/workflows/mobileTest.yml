@@ -34,3 +34,13 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./allure-report
+
+      # Fazer push das alterações para o repositório
+      - name: Push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git remote set-url origin https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/qamichaelmaia/application-mobile-test.git
+          git add .
+          git commit -m "Auto-publish report"
+          git push origin ci
