@@ -1,4 +1,5 @@
 # Automação de Testes de Aplicação Mobile
+![alt text](appium-ebacshop.png)
 
 Este projeto realiza a automação de testes de uma aplicação mobile, cobrindo o fluxo completo de login, seleção de produto e finalização de compra. O ambiente utiliza WebdriverIO, Appium, Allure Report e Android Studio.
 
